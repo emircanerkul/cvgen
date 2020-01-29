@@ -61,7 +61,8 @@ class CVGen
         return preg_replace("/\I(|%)=(.*?)\=(|%)I/", "", $template);
     }
 
-    private function compile_variables($template, $profile, $privacy, $color){
+    private function compile_variables($template, $profile, $privacy, $color)
+    {
         preg_match_all("/\I%=(.*?)\=%I/", $template, $variables);
 
         foreach ($variables[0] as $key => $value) {
@@ -114,7 +115,10 @@ class CVGen
 
     public function get_profile_list()
     {
-        return $this->profiles;
+        return array_values(array_filter($this->profiles, function ($v) {
+            if ($v == "[EN] Example") return false;
+            else return true;
+        }));
     }
 
     public function get_profile($name)
