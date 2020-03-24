@@ -15,8 +15,10 @@ Create specific resume for each target firms. Firstly decide which position do y
 * Create your profile.json file
 
 ## Installation via Docker (Suggested)
-* docker build .
-* docker run --rm -it -p 80:80 -v ${pwd}:/var/www/html YOURIMAGEIDHERE
+* docker build --no-cache=true --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') -t cvgen:latest .
+* docker run --rm -it -p 80:80 -v $(pwd):/var/www/html cvgen (on linux) or
+* docker run --rm -it -p 80:80 -v ${pwd}:/var/www/html cvgen (in powershell) or
+* docker run --rm -it -p 80:80 -v %cd%:/var/www/html cvgen (in cmd)
 
 ## Profile File CVGen Schema
 
