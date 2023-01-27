@@ -2,8 +2,6 @@
 
 Create specific resume for each target firms. Firstly decide which position do you want. Secondly select your strategy according to the time allocated by the target firm then select your resume primary color and resume template.
 
-![Preview](preview.png)
-
 ## Requirement
 * Web enviroment (Xammpp, Wamp etc.) and [Wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf)
 * or
